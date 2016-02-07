@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hunt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <style>
+    html {
+      background: #fff;
+      -user-select: none;
+    }
+    body {
+      margin: 200px;
+    }
+    .crosshairs {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      background: #f00;
+      width: 4px;
+      height: 4px;
+      margin-left: -2px;
+      margin-top: -2px;
+    }
+    .enemy {
+      position: fixed;
+      background: #ddd;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      display: inline-block;
+    }
+    .gameboard {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+    #console {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+    .win {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #38B2A6;
+      color: white;
+      font-size: 40px;
+      display: none;
+      text-align: center;
+      padding: 100px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="win">YOU WIN</div>
+  <div class="crosshairs"></div>
+  <div class="gameboard"><div class="enemy"></div></div>
+
+  <script src="/jquery.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
